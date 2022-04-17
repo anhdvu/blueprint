@@ -3,7 +3,7 @@ package service
 import (
 	"net/http"
 
-	"github.com/anhdvu/blueprint/internal/data"
+	repo "github.com/anhdvu/blueprint/internal/repository"
 	"github.com/anhdvu/blueprint/pkg/aulog"
 	"github.com/go-chi/chi/v5"
 )
@@ -11,7 +11,7 @@ import (
 // A Service represents a web service or a web app
 type Service struct {
 	config config
-	data   *data.Repositories
+	data   *repo.Repositories
 	log    *aulog.Logger
 	router *chi.Mux
 }
